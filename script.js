@@ -1,22 +1,13 @@
 function makeid(l) {
   // write your code here
-	let chars = [];
-
-	for (let i = 97; i <= 122; i++) {
-	    chars.push(i)
-	}
-
-	let result = ""
-
-	for (let j = 1; j <= l; j++){
-	
-	    let randomCode = chars[Math.floor(Math.random() * chars.length)]
-	    let randomChar = String.fromCharCode(randomCode);
-	    result += randomChar
-	   
-	}
+const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+let result = ""
+for(let i=0; i<l; i++){
+	result += chars[Math.floor(Math.random()*chars.length)]
+}
 
 	return result
+
 }
 
 // Do not change the code below.
